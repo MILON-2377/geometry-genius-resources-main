@@ -4,8 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>groetry projects</title>
+
+    <!-- tailwind and daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="p-12">
+    <header>
+
+    </header>
+
+    <!-- main section -->
+    <main>
+        <!-- cards section -->
+        <section>
+
+            <!-- cards container -->
+            <div>
+
+                <!-- triangle card 1 -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+
+                    <!-- triangle card picture -->
+                    <figure><img src="./triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title mx-auto">Triangle</h2>
+                      <p class="text-xl mx-auto">Area (A) = 0.5 X b X h</p>
+
+                      <!-- trinagle card input container -->
+                      <div class="flex">
+                        <p><input id="triangle-base" type="text" class="bg-gray-100 pl-3 w-28 py-3 rounded-md outline-slate-200 placeholder:text-slate-500" placeholder="base"> <span class="text-xl">cm</span></p>
+                        <p><input id="triangle-height" type="text" class="bg-gray-100 w-28  pl-3 py-3 rounded-md outline-slate-200 placeholder:text-slate-500" placeholder="height"> <span class="text-xl">cm</span></p>    
+                      </div>
+
+                       <!-- area display section -->
+                    <div class="text-center">
+                        <p class="text-xl">Area = <span id="display-triangle-area">0</span> <span>cm<sup>2</sup></span> </p>
+                    </div>
+
+                      <!-- triangle card button -->
+                      <div class="card-actions justify-end">
+                        <button onclick="triangleCalculation()" class="btn text-white hover:bg-blue-400 hover:text-slate-100 bg-blue-500 text-xl w-full">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- rectangle card 2 -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+
+                    <!-- triangle card picture -->
+                    <figure><img src="./rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title mx-auto">Triangle</h2>
+                      <p class="text-xl mx-auto">Area (A) = W x L</p>
+
+                      <!-- trinagle card input container -->
+                      <div class="flex">
+                        <p><input id="rectangle-width" type="text" class="bg-gray-100 pl-3 w-28 py-3 rounded-md outline-slate-200 placeholder:text-slate-500" placeholder="weight"> <span class="text-xl">cm</span></p>
+                        <p><input id="rectangle-length" type="text" class="bg-gray-100 w-28  pl-3 py-3 rounded-md outline-slate-200 placeholder:text-slate-500" placeholder="length"> <span class="text-xl">cm</span></p>    
+                      </div>
+
+                       <!-- area display section -->
+                    <div class="text-center">
+                        <p class="text-xl">Area = <span id="display-rectangle-area">0</span> <span>cm<sup>2</sup></span> </p>
+                    </div>
+
+                      <!-- triangle card button -->
+                      <div class="card-actions justify-end">
+                        <button onclick="rectangleCalculation()" class="btn text-white hover:bg-blue-400 hover:text-slate-100 bg-blue-500 text-xl w-full">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- calculation Area section -->
+            <div>
+                <h2 class="underline">Area Calculation</h2>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
